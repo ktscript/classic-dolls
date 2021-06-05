@@ -1,0 +1,77 @@
+@import './fonts';
+
+body {
+  font-family: Pacifico, sans-serif;
+  background: url("~/assets/images/bg.jpg") repeat;
+  color: #FF4279;
+}
+
+button:hover {
+  transform: scale(.99);
+  transition: all linear 400ms;
+}
+
+.modal-wrapper {
+  @apply z-modal w-full h-screen flex items-center justify-center fixed top-0;
+}
+img {
+  min-height: auto;
+  height: auto;
+}
+
+.show-down-enter-active {
+  transition: all 1s ease;
+}
+.show-down-enter, .show-down-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+.arrows_block {
+  top: -50px;
+  right: 0;
+}
+.slide_arrow {
+  @apply text-20 text-pink border border-pink rounded-full w-40 h-40 flex justify-center items-center cursor-pointer;
+}
+.slide_arrow:hover {
+  @apply border-black;
+}
+.slide_arrow:active {
+  @apply border-pink;
+}
+.bullet {
+  @apply h-8 w-8 bg-black rounded-full;
+}
+.vueperslides__bullet {
+  @apply my-30 mx-16;
+}
+.vueperslides__bullet--active .bullet {
+  @apply bg-pink;
+}
+.phone_ico {
+  background: center no-repeat url("~assets/images/icons/phone.svg");
+}
+
+@screen smx-max {
+  .modal-wrapper {
+    @apply w-full;
+  }
+}
+
+@screen xxxs-max {
+  .container {
+    @apply px-15 max-w-none w-full;
+  }
+}
+
+@screen md-max {
+  .container {
+    @apply max-w-900;
+  }
+}
+
+@screen sms-max {
+  .container {
+    @apply max-w-700;
+  }
+}
